@@ -8,11 +8,15 @@ import HomeView from "@/views/HomeView.vue";
       <v-app-bar-title>Beautify</v-app-bar-title>
 
       <template v-slot:append>
-        <v-btn icon="mdi-github" href="https://github.com/iAliF/Beautify" size="x-large"></v-btn>
+        <v-btn
+            icon="mdi-github"
+            href="https://github.com/iAliF/Beautify"
+            size="x-large"
+        ></v-btn>
       </template>
     </v-app-bar>
 
-    <v-main class=" align-center justify-center" style="min-height: 300px;">
+    <v-main>
       <v-container>
         <HomeView />
       </v-container>
