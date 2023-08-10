@@ -1,24 +1,15 @@
 <script setup>
 import HomeView from "@/views/HomeView.vue";
+import Navbar from "@/components/Navbar.vue";
 </script>
 
 <template>
   <v-layout class="rounded rounded-md">
-    <v-app-bar color="primary">
-      <v-app-bar-title>Beautify</v-app-bar-title>
-
-      <template v-slot:append>
-        <v-btn
-            icon="mdi-github"
-            href="https://github.com/iAliF/Beautify"
-            size="x-large"
-        ></v-btn>
-      </template>
-    </v-app-bar>
+    <Navbar/>
 
     <v-main>
       <v-container>
-        <HomeView />
+        <HomeView/>
       </v-container>
     </v-main>
   </v-layout>
