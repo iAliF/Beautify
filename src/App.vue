@@ -4,7 +4,7 @@ import HomeView from "@/views/HomeView.vue";
 
 <template>
   <v-layout class="rounded rounded-md">
-    <v-app-bar color="blue">
+    <v-app-bar color="primary">
       <v-app-bar-title>Beautify</v-app-bar-title>
 
       <template v-slot:append>
