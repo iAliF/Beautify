@@ -39,12 +39,13 @@
     <v-snackbar
         v-model="snackbar"
         timeout="2000"
+        color="primary"
     >
       Text copied to clipboard
 
       <template v-slot:actions>
         <v-btn
-            color="blue"
+            color="white"
             variant="text"
             @click="snackbar = false"
         >
@@ -60,7 +61,7 @@ export default {
   name: "FontsList",
   props: ['fontsList'],
   data: () => ({
-    snackbar: false
+    snackbar: true
   }),
   methods: {
     copy(index) {
