@@ -2,7 +2,8 @@
   <div class="FontsList">
     <v-row class="justify-center">
       <v-col
-          cols="8"
+          sm="10"
+          md="8"
           v-if="fontsList.length"
       >
         <v-card

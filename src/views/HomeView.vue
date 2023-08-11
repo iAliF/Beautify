@@ -1,7 +1,10 @@
 <template>
   <div class="Home">
     <v-row class="justify-center mt-16">
-      <v-col cols="8">
+      <v-col
+          sm="10"
+          md="8"
+      >
         <v-text-field
             label="Enter your text"
             placeholder="Beautify"
@@ -16,7 +19,7 @@
       </v-col>
     </v-row>
 
-    <FontsList :fontsList="fontsList" />
+    <FontsList :fontsList="fontsList"/>
   </div>
 </template>
 
