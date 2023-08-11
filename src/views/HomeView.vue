@@ -10,50 +10,22 @@
             color="primary"
             variant="outlined"
             @keyup="handleInput"
+            @click:clear="handleInput"
         >
         </v-text-field>
       </v-col>
     </v-row>
 
-    <v-row class="justify-center">
-      <v-col
-          cols="8"
-          v-if="fontsList.length"
-      >
-        <v-card
-            class="pa-2"
-            rounded="xl"
-        >
-          <v-list
-              density="comfortable"
-          >
-            <v-list-subheader>Result</v-list-subheader>
-
-            <v-list-item
-                v-for="(value, index) in fontsList"
-                :key="index"
-                :value="value"
-                :title="value"
-                color="primary"
-                rounded="xl"
-                class="pa-4"
-            >
-              <template v-slot:append>
-                test
-              </template>
-            </v-list-item>
-          </v-list>
-        </v-card>
-      </v-col>
-    </v-row>
-
+    <FontsList :fontsList="fontsList" />
   </div>
 </template>
 
 <script>
 import beautify from "@/components/utils/fonts";
+import FontsList from "@/components/FontsList.vue";
 
 export default {
+  components: {FontsList},
   data: () => ({
     textInput: '',
     fontsList: []
