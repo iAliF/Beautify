@@ -61,7 +61,7 @@ export default {
   name: "FontsList",
   props: ['fontsList'],
   data: () => ({
-    snackbar: true
+    snackbar: false
   }),
   methods: {
     copy(index) {
