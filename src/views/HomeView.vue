@@ -16,13 +16,15 @@
     </v-row>
 
     <v-row class="justify-center">
-      <v-col cols="8">
+      <v-col
+          cols="8"
+          v-if="fontsList.length"
+      >
         <v-card
             class="pa-2"
-        rounded="xl"
+            rounded="xl"
         >
           <v-list
-              v-if="fontsList.length"
               density="comfortable"
           >
             <v-list-subheader>Result</v-list-subheader>
