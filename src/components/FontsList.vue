@@ -24,19 +24,51 @@
                 class="pa-4"
             >
               <template v-slot:append>
-                test
+                <v-btn
+                    icon="mdi-content-copy"
+                    variant="flat"
+                    @click="copy(index)"
+                ></v-btn>
               </template>
             </v-list-item>
           </v-list>
         </v-card>
       </v-col>
     </v-row>
+
+    <v-snackbar
+        v-model="snackbar"
+        timeout="2000"
+    >
+      Text copied to clipboard
+
+      <template v-slot:actions>
+        <v-btn
+            color="blue"
+            variant="text"
+            @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
 <script>
 export default {
   name: "FontsList",
-  props: ['fontsList']
+  props: ['fontsList'],
+  data: () => ({
+    snackbar: false
+  }),
+  methods: {
+    copy(index) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(this.fontsList[index])
+        this.snackbar = true
+      }
+    }
+  }
 }
 </script>
